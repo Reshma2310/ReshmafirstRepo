@@ -14,3 +14,6 @@ operations[output3]="$(( c + a / c ))"
 operations[output4]="$(( c % a + c ))"
 
 echo "Outputs values are ${operations[@]}"
+array=( ${operations[@]} )
+
+echo "array is ${array[@]}"
