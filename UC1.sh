@@ -7,14 +7,10 @@ read b
 echo "Enter Third input"
 read c
 
-output1=$(( a + b * c ))
-echo "Output of UC2 is $output1"
+declare -A operations
+operations[output1]="$(( a + b * c ))"
+operations[output2]="$(( a * b + c ))"
+operations[output3]="$(( c + a / c ))"
+operations[output4]="$(( c % a + c ))"
 
-output2=$(( a * b + c ))
-echo "Output of UC3 is $output2"
-
-output3=$(( c + a / c ))
-echo "Output of UC4 is $output3"
-
-output4=$(( c % a + c ))
-echo "Output of UC5 is $output4"
+echo "Outputs values are ${operations[@]}"
