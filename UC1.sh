@@ -13,3 +13,5 @@ echo "Output of UC2 is $output1"
 output2=$(( a * b + c ))
 echo "Output of UC3 is $output2"
 
+output3=$(( c + a / c ))
+echo "Output of UC4 is $output3"
