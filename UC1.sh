@@ -32,5 +32,10 @@ do
     done
 done
 
-echo "Array in sorted order :"
-echo ${array[*]}
+echo "Descending Order of Array is ${array[*]}"
+# for Ascending order
+for (( i=${#array[@]}-1; i>=0; i-- ))
+do
+rev[${#rev[@]}]=${array[i]}
+done
+echo "Ascending order of array is ${rev[@]}"
