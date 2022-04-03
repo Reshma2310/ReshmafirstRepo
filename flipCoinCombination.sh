@@ -26,3 +26,15 @@ do
 	done
 done
 echo "Output of Doublet Combination is ${res2[@]}"
+#Triplet Combination
+for (( i=0; i<5; i++ ))
+do
+        for (( j=0; j<5; j++ ))
+        do
+		for (( k=0; k<5; k++ ))
+	        do
+	        res3[$i]=$(flip $i)$(flip $j)$(flip $k)
+        	done
+	done
+done
+echo "Output of Triplet Combination is ${res3[@]}"
